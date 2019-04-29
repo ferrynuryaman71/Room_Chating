@@ -10,10 +10,12 @@ describe('generateMessage', () => {
 
 		expect(message.createdAd).toBeA('number');
 		expect(message).toInclude({from, text});
-
-		//store res in variable
-		//asert from match
-		//asert text match
-		//asert craetedAd is number
 	})
 })
+
+
+// describe('generateLocationMessage', () => {
+// 	it('should generate correct message object', () => {
+ 
+// 	})
+// })
