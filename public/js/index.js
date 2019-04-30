@@ -9,6 +9,7 @@
 	});
 
 	socket.on('newMessage', (message) => {
+//		var formattedTime = moment(message.createdAt).format('dddd DD MMM YYYY kk:mm:ss');
 		console.log('new Message', message);
 		var li = jQuery('<li></li>');
 		li.text(`${message.from}: ${message.text}`);
@@ -17,6 +18,7 @@
 	});
 
 	socket.on('newLocationMessage', (message) => {
+//		var formattedTime = moment(message.createdAt).format('dddd DD MMM YYYY kk:mm:ss');
 		var li = jQuery('<li></li>'); 
 		var a = jQuery('<a target="_blank">My Location</a>');
 
