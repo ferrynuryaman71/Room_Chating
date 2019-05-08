@@ -30,9 +30,9 @@ io.on('connection', (socket) => {
 
 		io.to(params.room).emit('updateUserList', users.getUserList(params.room));
 		// socket.emit from Admin text welcome to the chat app
-		socket.emit('newMessage', generateMessage('Admin', 'Welcome to the chat app'));
+		socket.emit('newMessage', generateMessage( `Welcome to room ${params.name}`));
 		// socket.broadcast.emit from Admin text New User joined
-		socket.broadcast.to(params.room).emit('newMessage', generateMessage('Admin', `${params.name} has joined. `));
+		socket.broadcast.to(params.room).emit('newMessage', generateMessage(`${params.name} has joined. `));
 		callback();
 	});
 
@@ -65,7 +65,7 @@ io.on('connection', (socket) => {
 
 		if (users) {
 			io.to(user.room).emit('updateUserList', users.getUserList(user.room))
-			io.to(user.room).emit('newMessage', generateMessage('Admin', `${user.name} has left`));
+			io.to(user.room).emit('newMessage', generateMessage(`${user.name} has left`));
 		}
 	});
 });

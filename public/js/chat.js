@@ -43,6 +43,7 @@
 		jQuery('#users').html(ol);
 	})
 
+	
 
 	socket.on('newMessage', (message) => {
 		var formattedTime = moment(message.createdAt).format('dddd, kk:mm');
