@@ -1,4 +1,5 @@
 	var socket = io();
+	
 	function scrollToBottom() {
 		//selectors
 		var messages = jQuery('#messages');
@@ -15,7 +16,7 @@
 		}
 	} 
 
-
+ 
 	socket.on('connect', () => {
 		var params = jQuery.deparam(window.location.search);
 
