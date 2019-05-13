@@ -70,6 +70,6 @@ io.on('connection', (socket) => {
 	});
 });
 
-server.listen(1998, () => {
+server.listen(port, () => {
 	console.log(`connect to port ${port}`);
 });
